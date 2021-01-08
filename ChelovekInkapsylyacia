@@ -1,0 +1,49 @@
+class ChelovekInkapsylyacia {
+    //инкапсуляция пола
+    private String pol;
+    public String getPol(){
+        return pol;
+    }
+    public void setPol(String pol){
+        this.pol = pol;
+    }
+    //инкапсуляция возраста
+    private int vozrast;
+    public int getVozrast(){
+        return vozrast;
+    }
+    public void setVozrast(int voz){
+        if(voz>0) {vozrast=voz;}
+    }
+    //инкапсуляция веса
+    private int ves;
+    public int getVes(){
+        return ves;
+    }
+    public void setVes(int v){
+        if (v>0){
+            ves = v;
+        }
+    }
+    //инкапсуляция имени
+    private String name;
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+}
+
+
+
+class TestChelovekChelovekInkapsylyacia{
+    public static void main(String[] args) {
+        ChelovekInkapsylyacia ch = new ChelovekInkapsylyacia();
+        ch.setName("Артур");
+        ch.setVozrast(25);
+        ch.setVes(67);
+        ch.setPol("мужской");
+        System.out.println("Имя "+ch.getName()+", возраст "+ch.getVozrast()+", вес "+ch.getVes()+" кг, пол "+ch.getPol());
+    }
+}
