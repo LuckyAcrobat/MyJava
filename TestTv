@@ -1,0 +1,37 @@
+class Electronica{
+    final int napryazhenie = 220;
+    void abc (){
+        System.out.println("Я облегчаю людям жизнь");
+    }
+}
+
+interface Pult {
+    int kolichestvoKnopok = 10;
+    void tvVklVikl();
+    void gromkost();
+}
+
+class TV extends Electronica implements Pult{
+    @Override
+    void abc (){
+        System.out.println("Я облегчаю людям жизнь. Я показываю ТВ каналы");
+    }
+
+    @Override
+    public void tvVklVikl() {
+        System.out.println("Я включаю и выключаю ТВ");
+    }
+
+    @Override
+    public void gromkost() {
+        System.out.println("Я меняю громкость ТВ");
+    }
+}
+class TestTv{
+    public static void main(String[] args) {
+        TV e = new TV();
+        e.abc();
+        e.gromkost();
+        e.tvVklVikl();
+    }
+}
