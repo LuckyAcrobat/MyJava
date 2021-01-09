@@ -35,11 +35,7 @@ class Traktor extends Technika{
     }
 }
 
-class Gruzovik extends Technika{
-       void vozitZemlu(){
-        System.out.println("Я могу возить землю");
-    }
-}
+
 
 class testTechnika {
     public static void main(String[] args) {
@@ -56,12 +52,5 @@ class testTechnika {
         System.out.println("Я трактор, у меня "+t.koleso+" колеса и моя масса "+t.massa+" кг. Топливо, которое я использую - "+t.vidTopliva);
         t.kapaet();
 
-        Gruzovik g = new Gruzovik();
-        g.koleso = 10;
-        g.massa = 9000;
-        g.passazhir = 1;
-        g.toplivoDT();
-        System.out.println("Я грузовик, у меня "+g.koleso+" колес и моя масса "+g.massa+" кг. Топливо, которое я использую - "+g.vidTopliva);
-        g.vozitZemlu();
     }
 }
