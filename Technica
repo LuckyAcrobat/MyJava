@@ -12,32 +12,38 @@ class Technika {
     void toplivoAI(){
         vidTopliva = "Бензин";
     }
+    Technika(){}
+    Technika(int koleso, int massa, int passazhir){
+       this.koleso = koleso;
+       this.massa = massa;
+       this.passazhir = passazhir;
+    }
 }
 
 class Avtobus extends Technika{
+    Avtobus(int a, int b, int c){
+        super(a,b,c);
+    }
     void vozitLudei(){
         System.out.println("Я могу возить "+ passazhir + " человек.");
     }
 }
 
 class Traktor extends Technika{
-    void kapaet(){
+        void kapaet(){
         System.out.println("Я могу капать землю");
     }
 }
 
 class Gruzovik extends Technika{
-    void vozitZemlu(){
+       void vozitZemlu(){
         System.out.println("Я могу возить землю");
     }
 }
 
 class testTechnika {
     public static void main(String[] args) {
-        Avtobus a = new Avtobus();
-        a.koleso = 6;
-        a.massa = 5000;
-        a.passazhir = 20;
+        Avtobus a = new Avtobus(6, 5000, 20);
         a.toplivoAI();
         System.out.println("Я автобус, у меня "+a.koleso+" колес и моя масса "+a.massa+" кг. Топливо, которое я использую - "+a.vidTopliva);
         a.vozitLudei();
